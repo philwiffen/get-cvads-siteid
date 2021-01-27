@@ -2,11 +2,16 @@
 # This script will get a bearer token from the Citrix Cloud Trust Service, and then use that to get your CVADS Site ID from the CVADS API
 # By Phil Wiffen
  
-# Fill in your Citrix Cloud customerID here:
-$customerID = "yourcustomerid"
-# Next we need your Secure Client details (you get this from Citrix Cloud > Identity and Access Management > API Access)
+# Fill in your Citrix Cloud customerID and Secure Client details below, between the quote marks (you get these from Citrix Cloud > Identity and Access Management > API Access)
+$customerID = ""
 $clientID = ""
 $clientSecret = ""
+
+<# Example, in case it helps:
+$customerID = "companycustomerid"
+$clientID = "f539b28c-6f93-93c2-b526-49c48289f62e"
+$clientSecret = "FDFLG3fgGKDKD=="
+#>
 
 #URL we'll call for the trust service to get the bearer token
 $trustUri = "https://trust.citrixworkspacesapi.net/$customerID/tokens/clients"
